@@ -10,9 +10,7 @@ echo "This is Build stage"
       }
   }
 stage ('TEST')
-agent {
-  label 'jenkins'
-}
+agent {  label 'jenkins' }
    {
 steps {
 echo "This is test stage"
