@@ -10,10 +10,12 @@ echo "This is Build stage"
 }
 stage ( 'TEST' )
 {
+agent any
 echo "This is test stage"
 }
 Stage ( 'DEPLOY' )
 {
+agent any
 echo "This is Deploy stage"
 }
 }
