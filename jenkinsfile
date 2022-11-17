@@ -1,28 +1,26 @@
 pipeline
 {
-agent {
-  label 'jenkins'
-}
-
 stages{
 stage ('BUILD')
   {
-//agent any
+agent any
 steps{
 echo "This is Build stage"
       }
   }
 stage ('TEST')
+agent {
+  label 'jenkins'
+}
    {
 steps {
-//agent any
 echo "This is test stage"
       }
     }
 stage ('DEPLOY')
   {
 steps {
-//agent any
+agent any
 echo "This is Deploy stage"
       }
   }
