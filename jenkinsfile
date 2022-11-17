@@ -1,6 +1,6 @@
 pipeline
 {
-stages ( 'BUILD' )
+stages ('BUILD')
 {
 agent any
 steps
