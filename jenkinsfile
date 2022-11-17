@@ -1,3 +1,11 @@
 pipeline
 {
+stages('BUILD')
+{
+agent any
+steps
+{
+echo "This is Build stage"
+}
+}
 }
