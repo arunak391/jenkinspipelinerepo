@@ -19,8 +19,8 @@ echo "This is test stage"
     }
 stage ('DEPLOY')
   {
+  agent any
 steps {
-agent any
 echo "This is Deploy stage"
       }
   }
