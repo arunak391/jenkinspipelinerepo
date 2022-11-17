@@ -1,6 +1,6 @@
 pipeline
 {
-stages('BUILD')
+stages ( 'BUILD' )
 {
 agent any
 steps
@@ -8,4 +8,13 @@ steps
 echo "This is Build stage"
 }
 }
+stage ( 'TEST' )
+{
+echo "This is test stage"
 }
+Stage ( 'DEPLOY' )
+{
+echo "This is Deploy stage"
+}
+}
+
