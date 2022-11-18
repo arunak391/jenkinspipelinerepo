@@ -28,10 +28,19 @@ echo "This is test on safari browser"
 stage ('DEPLOY')
   {
   agent any
+  parallel{
+  stage ('SERVER1'){
 steps {
-echo "This is Deploy stage"
+echo "This is Deploy in server1"
       }
   }
+  stage ('SERVER2'){
+steps {
+echo "This is Deploy in server2"
+      }
+  }
+}
+}
 }
 }
 
