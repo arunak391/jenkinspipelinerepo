@@ -11,7 +11,7 @@ echo "This is Build stage"
   }
 stage ('TEST PARALLEL')
 parallel  
-stage ('TEST ON CHROME') {
+stage('TEST ON CHROME') {
    agent {  label 'jenkins' }
 steps {
 echo "This is test stage"
