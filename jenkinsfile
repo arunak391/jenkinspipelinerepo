@@ -27,7 +27,6 @@ echo "This is test on safari browser"
     }
 stage ('DEPLOY')
   {
-  agent any
   parallel{
   stage ('SERVER1'){
 steps {
