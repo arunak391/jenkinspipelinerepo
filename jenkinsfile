@@ -43,6 +43,7 @@ steps {
 echo "This is Deploy in server3"
       }
   }
+  }
   stage ('SERVER4'){
 steps {
 echo "This is Deploy in server4"
