@@ -14,7 +14,13 @@ parallel {
 stage ('TEST ON CHROME') {
    agent {  label 'jenkins' }
 steps {
-echo "This is test stage"
+echo "This is test on chrome browser"
+      }
+    }
+    stage ('TEST ON SAFARI') {
+   agent {  label 'jenkins' }
+steps {
+echo "This is test on safari browser"
       }
     }
     }
