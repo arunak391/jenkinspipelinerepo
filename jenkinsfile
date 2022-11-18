@@ -38,7 +38,7 @@ steps {
 echo "This is Deploy in server2"
       }
   }
-  stage ('SERVER3){
+  stage ('SERVER3'){
 steps {
 echo "This is Deploy in server3"
       }
