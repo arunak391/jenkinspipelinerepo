@@ -1,4 +1,5 @@
 pipelineparameters {
+agent any;
   string defaultValue: 'name', name: 'BHUVANENDER'
 }
 stages{
