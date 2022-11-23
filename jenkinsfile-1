@@ -1,11 +1,17 @@
-pipelineparameters {
+pipeline{
 agent any;
+pipelineparameters {
+
   string defaultValue: 'name', name: 'BHUVANENDER'
 }
-stages{
+stages 
+{
 stage(NAME)
 {
-echo"$Name"
+steps {
+echo "$Name"
+}
+}
 }
 }
 
