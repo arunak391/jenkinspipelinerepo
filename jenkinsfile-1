@@ -1,17 +1,14 @@
-pipeline{
-agent any;
-pipelineparameters {
+pipeline
+{
+agent any
+parameters {
   string defaultValue: 'name', name: 'BHUVANENDER'
 }
-stages 
-{
-stage(NAME)
-{
-steps {
-echo "${param.name}"
+stages{
+    stage ("parammeterizedbuild"){
+        steps{
+        echo "${name} hi"
+    }
+    }
+}                
 }
-}
-}
-}
-
-
