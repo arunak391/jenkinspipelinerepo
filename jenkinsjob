@@ -20,12 +20,13 @@ stage ('TEST PARALLEL')
 {
 parallel {
 stage ('TEST ON CHROME') {
-agent {  label 'jenkins' } 
+agent any
 steps {
 echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
 echo "${name}"
-echo "${ip}"println "hostname".execute().text
+echo "${ip}"
+println "hostname".execute().text
 
       }
     } 
