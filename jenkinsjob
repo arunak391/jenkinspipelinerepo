@@ -16,7 +16,7 @@ parameters {
   string defaultValue: 'Hostname', name: 'BHUVANENDER'
          }
 stage ('TEST ON CHROME') {
-export currentBuild.number= 1
+env currentBuild.number= 1
    agent {  label 'jenkins' } 
 steps {
 echo "This is test on chrome browser"
