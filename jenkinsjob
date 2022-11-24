@@ -17,13 +17,13 @@ stage ('TEST PARALLEL')
 {
 parallel {
 stage ('TEST ON CHROME') {
-environment{
-         export currentBuild.number = "1"
-         }
-   agent {  label 'jenkins' } 
+agent {  label 'jenkins' } 
+environment {
+  Build_Num = "1"
+}  
 steps {
 echo "This is test on chrome browser"
-echo "Build number is ${currentBuild.number}"
+echo "Build number is ${Build_Num}"
 echo "$Hostname"
       }
     }
