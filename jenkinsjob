@@ -6,7 +6,7 @@ stage ('BUILD')
   {
 agent any
 steps{
-echo "This is Job stage"
+echo "This is BUILD stage"
       }
   }
 stage ('TEST PARALLEL'){
@@ -15,14 +15,15 @@ stage ('TEST ON CHROME') {
    agent {  label 'jenkins' }
 steps {
 echo "This is test on chrome browser"
-sh 'sleep 5'
+//sh 'sleep 5'
+println "uname -a".execute().text
       }
     }
     stage ('TEST ON SAFARI') {
    agent {  label 'jenkins' }
 steps {
 echo "This is test on safari browser"
-sh 'sleep 5'
+//sh 'sleep 5'
       }
     }
     stage ('TEST ON Mozilla') {
