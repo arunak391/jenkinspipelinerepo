@@ -26,18 +26,19 @@ sh 'sleep 5'
       }
     }
     stage ('TEST ON Mozilla') {
-   agent {  label 'jenkins' }
+   agent {  label 'maste' }
 steps {
 echo "This is test on safari browser"
 sh 'sleep 5'
       }
     }
     stage ('TEST ON internetexplorer') {
-   agent {  label 'jenkins' }
+   agent {  label 'master' }
 steps {
 echo "This is test on safari browser"
 sh 'sleep 5'
       }
+    }
     }
     }
     }
