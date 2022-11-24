@@ -44,10 +44,7 @@ echo "This is test on safari browser"
    agent {  label 'master' }
 steps {
 echo "This is test on safari browser"
-import hudson.model.Computer.ListPossibleNames
 
-def node = jenkins.model.Jenkins.instance.getNode( "myslave" )
-println node.computer.getChannel().call(new ListPossibleNames())
       }
     }
     }
