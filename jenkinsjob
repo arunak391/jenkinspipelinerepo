@@ -1,6 +1,6 @@
 pipeline
 {
-agent none
+agent any
 stages{
 stage ('BUILD')
   {
@@ -10,6 +10,7 @@ echo "This is BUILD stage"
       }
   }
 stage ('TEST PARALLEL') 
+{
 parallel {
 parameters {
   string defaultValue: 'Hostname', name: 'BHUVANENDER'
