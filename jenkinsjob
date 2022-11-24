@@ -15,11 +15,12 @@ parameters {
   string defaultValue: 'Hostname', name: 'BHUVANENDER'
          }
 stage ('TEST ON CHROME') {
-
+export currentBuild.number= 1
    agent {  label 'jenkins' } 
 steps {
 echo "This is test on chrome browser"
-echo"$Hostname"
+echo "Build number is ${currentBuild.number}"
+echo "$Hostname"
 //import hudson.model.Computer.ListPossibleNames
 //def node = jenkins.model.Jenkins.instance.getNode( "myslave" )
 //println node.computer.getChannel().call(new ListPossibleNames())
