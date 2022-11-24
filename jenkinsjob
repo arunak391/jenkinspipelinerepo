@@ -23,8 +23,8 @@ stage ('TEST ON CHROME') {
 agent {  label 'jenkins' } 
 steps {
 echo "This is test on chrome browser"
-echo "Build number is ${Build_Num}"
-echo "${name}"
+echo "Build number is ${param.Build_Num}"
+echo "${param.name}"
 ping ps
       }
     }
