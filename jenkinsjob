@@ -13,11 +13,16 @@ stage ('TEST PARALLEL'){
 parallel {
 stage ('TEST ON CHROME') {
    agent {  label 'jenkins' }
+   parameters {
+  string defaultValue: 'Hostname', name: 'BHUVANENDER'
+}
+   
 steps {
 echo "This is test on chrome browser"
+echo"$Hostname"
 //import hudson.model.Computer.ListPossibleNames
-def node = jenkins.model.Jenkins.instance.getNode( "myslave" )
-println node.computer.getChannel().call(new ListPossibleNames())
+//def node = jenkins.model.Jenkins.instance.getNode( "myslave" )
+//println node.computer.getChannel().call(new ListPossibleNames())
       }
     }
     stage ('TEST ON SAFARI') {
