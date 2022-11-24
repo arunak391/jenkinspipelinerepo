@@ -1,9 +1,7 @@
 pipeline
 {
 agent any
-parameters {
-  string defaultValue: 'Hostname', name: 'BHUVANENDER'
-         }
+
          environment {
   Build_Num = "1"
 }           
@@ -19,11 +17,14 @@ stage ('TEST PARALLEL')
 {
 parallel {
 stage ('TEST ON CHROME') {
+parameters {
+  string defaultValue: 'Hostname', name: 'BHUVANENDER'
+         }
 agent {  label 'jenkins' } 
 steps {
 echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
-echo "$Hostname"
+echo "${Hostname}"
       }
     }
     stage ('TEST ON SAFARI') {
