@@ -15,7 +15,7 @@ parallel {
 parameters {
   string defaultValue: 'Hostname', name: 'BHUVANENDER'
          }
-stage ('TEST ON CHROME') {
+stage('TEST ON CHROME') {
 env currentBuild.number= 1
    agent {  label 'jenkins' } 
 steps {
@@ -42,6 +42,7 @@ steps {
 echo "This is test on safari browser"
 sh 'sleep 5'
       }
+    }
     }
     }
     }
