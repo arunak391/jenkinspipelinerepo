@@ -24,7 +24,7 @@ agent {  label 'jenkins' }
 steps {
 echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
-echo "${Hostname}"
+echo "${name}"
       }
     }
     stage ('TEST ON SAFARI') {
