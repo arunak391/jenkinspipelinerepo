@@ -25,7 +25,6 @@ steps {
 echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
 echo "${Hostname}"
-ifconfig
       }
     }
     stage ('TEST ON SAFARI') {
