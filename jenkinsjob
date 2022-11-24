@@ -1,1 +1,22 @@
+pipeline{
+agent any
+stages{
+stage('TEST PARALLEL')
+parallel{
+{
+steps{
+echo "This is the test on chromebrowse"
+sh 'sleep 5'
+}
+}
+stage('TEST PARALLEL')
+{
+steps{
+echo "This stage is Demo1"
+sh 'sleep 5'
+}
+}
 
+}
+}
+}
