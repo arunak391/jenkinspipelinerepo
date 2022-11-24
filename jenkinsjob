@@ -27,7 +27,7 @@ echo "Build number is ${Build_Num}"
 echo "${name}"
 echo "${ip}"
 echo "ifconfig"
-Jenkins.getInstance().getComputer(env['jenkinsfile']).getHostName()
+Jenkins.getInstance().getComputer(env['master']).getHostName()
 
 
       }
