@@ -21,9 +21,6 @@ steps {
 echo "This is test on chrome browser"
 echo "Build number is ${currentBuild.number}"
 echo "$Hostname"
-//import hudson.model.Computer.ListPossibleNames
-//def node = jenkins.model.Jenkins.instance.getNode( "myslave" )
-//println node.computer.getChannel().call(new ListPossibleNames())
       }
     }
     stage ('TEST ON SAFARI') {
@@ -48,5 +45,4 @@ sh 'sleep 5'
     }
     }
     }
-    
-}
+    }
