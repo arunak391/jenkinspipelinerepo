@@ -11,10 +11,11 @@ echo "This is BUILD stage"
   }
 stage ('TEST PARALLEL') 
 parallel {
-stage ('TEST ON CHROME') {
 parameters {
   string defaultValue: 'Hostname', name: 'BHUVANENDER'
          }
+stage ('TEST ON CHROME') {
+
    agent {  label 'jenkins' } 
 steps {
 echo "This is test on chrome browser"
