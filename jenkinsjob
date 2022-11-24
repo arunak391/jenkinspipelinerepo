@@ -4,7 +4,9 @@ agent any
 parameters {
   string defaultValue: 'Hostname', name: 'BHUVANENDER'
          }
-         
+         environment {
+  Build_Num = "1"
+}           
 stages{
 stage ('BUILD')
   {
@@ -18,9 +20,6 @@ stage ('TEST PARALLEL')
 parallel {
 stage ('TEST ON CHROME') {
 agent {  label 'jenkins' } 
-environment {
-  Build_Num = "1"
-}  
 steps {
 echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
