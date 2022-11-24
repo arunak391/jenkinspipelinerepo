@@ -27,29 +27,7 @@ echo "Build number is ${Build_Num}"
 echo "${name}"
 echo "${ip}"
       }
-    }
-    stage ('TEST ON SAFARI') {
-   agent {  label 'jenkins' }
-steps {
-echo "This is test on safari browser"
-      }
-    }
-    stage ('TEST ON Mozilla') {
-   agent {  label 'maste' }
-steps {
-echo "This is test on safari browser"
-      }
-    }
-    stage ('TEST ON internetexplorer') {
-   agent {  label 'master' }
-steps {
-echo "This is test on safari browser"
-//echo "This is test on chrome browser"
-echo "Build number is ${Build_Num}"
-//echo "${name}"
-//echo "${ip}"
-      }
-    }
+    } 
     }
     }
     }
