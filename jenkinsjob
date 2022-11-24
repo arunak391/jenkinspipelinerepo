@@ -26,7 +26,7 @@ echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
 echo "${name}"
 echo "${ip}"
-println "hostname".execute().text
+echo "ifconfig".jenkinsfile
 
       }
     } 
