@@ -1,22 +1,43 @@
-pipeline{
-agent any
+pipeline
+{
+agent none
 stages{
-stage('TEST PARALLEL')
-parallel{
-{
+stage ('BUILD')
+  {
+agent any
 steps{
-echo "This is the test on chromebrowse"
+echo "This is Job stage"
+      }
+  }
+stage ('TEST PARALLEL'){
+parallel {
+stage ('TEST ON CHROME') {
+   agent {  label 'jenkins' }
+steps {
+echo "This is test on chrome browser"
 sh 'sleep 5'
-}
-}
-stage('TEST PARALLEL')
-{
-steps{
-echo "This stage is Demo1"
+      }
+    }
+    stage ('TEST ON SAFARI') {
+   agent {  label 'jenkins' }
+steps {
+echo "This is test on safari browser"
 sh 'sleep 5'
-}
-}
-
-}
-}
-}
+      }
+    }
+    stage ('TEST ON Mozilla') {
+   agent {  label 'jenkins' }
+steps {
+echo "This is test on safari browser"
+sh 'sleep 5'
+      }
+    }
+    stage ('TEST ON internetexplorer') {
+   agent {  label 'jenkins' }
+steps {
+echo "This is test on safari browser"
+sh 'sleep 5'
+      }
+    }
+    }
+    }
