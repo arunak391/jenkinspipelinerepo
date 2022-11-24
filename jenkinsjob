@@ -6,7 +6,7 @@ parameters {
          }
 
          environment {
-  Build_Num="$1"
+  Build_Num="1"
 }           
 stages{
 stage ('BUILD')
