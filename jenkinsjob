@@ -24,14 +24,12 @@ hostname
    agent {  label 'jenkins' }
 steps {
 echo "This is test on safari browser"
-//sh 'sleep 5'
       }
     }
     stage ('TEST ON Mozilla') {
    agent {  label 'maste' }
 steps {
 echo "This is test on safari browser"
-sh 'sleep 5'
       }
     }
     stage ('TEST ON internetexplorer') {
