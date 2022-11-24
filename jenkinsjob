@@ -15,8 +15,9 @@ stage ('TEST ON CHROME') {
    agent {  label 'jenkins' }
 steps {
 echo "This is test on chrome browser"
-//sh 'sleep 5'
+sh ' ' '
 println "uname -a".execute().text
+'''
       }
     }
     stage ('TEST ON SAFARI') {
