@@ -1,6 +1,9 @@
 pipeline
 {
 agent any
+parameters {
+  string defaultValue: 'Hostname', name: 'BHUVANENDER'
+         }
 stages{
 stage ('BUILD')
   {
@@ -13,9 +16,7 @@ stage ('TEST PARALLEL')
 {
 parallel {
 stage ('TEST ON CHROME') {
-parameters {
-  string defaultValue: 'Hostname', name: 'BHUVANENDER'
-         }
+
 //env currentBuild.number= 1
    agent {  label 'jenkins' } 
 steps {
