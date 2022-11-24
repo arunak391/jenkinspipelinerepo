@@ -12,7 +12,7 @@ echo "This is BUILD stage"
 stage ('TEST PARALLEL') 
 {
 parallel {
-stage('TEST ON CHROME') {
+stage ('TEST ON CHROME') {
 parameters {
   string defaultValue: 'Hostname', name: 'BHUVANENDER'
          }
