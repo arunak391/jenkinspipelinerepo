@@ -13,11 +13,13 @@ stage ('TEST PARALLEL'){
 parallel {
 stage ('TEST ON CHROME') {
    agent {  label 'jenkins' }
+   export Build_num=1
+   export Hostname=Bhuvanender
+   
 steps {
 echo "This is test on chrome browser"
-println "uname -a".execute().text
-hostname
-
+echo "${Build_num}"
+echo "${Hostname}"
       }
     }
     stage ('TEST ON SAFARI') {
