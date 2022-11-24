@@ -24,7 +24,8 @@ agent {  label 'jenkins' }
 steps {
 echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
-echo "${name}"
+echo "${Hostname}"
+ifconfig
       }
     }
     stage ('TEST ON SAFARI') {
