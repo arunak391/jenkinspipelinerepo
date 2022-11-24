@@ -13,13 +13,12 @@ stage ('TEST PARALLEL'){
 parallel {
 stage ('TEST ON CHROME') {
    agent {  label 'jenkins' }
-   export Build_num=1
-   export Hostname=Bhuvanender
-   
 steps {
 echo "This is test on chrome browser"
-echo "${Build_num}"
-echo "${Hostname}"
+import hudson.model.Computer.ListPossibleNames
+
+def node = jenkins.model.Jenkins.instance.getNode( "myslave" )
+println node.computer.getChannel().call(new ListPossibleNames())
       }
     }
     stage ('TEST ON SAFARI') {
