@@ -25,7 +25,8 @@ steps {
 echo "This is test on chrome browser"
 echo "Build number is ${Build_Num}"
 echo "${name}"
-echo "${ip}"
+echo "${ip}"println "hostname".execute().text
+
       }
     } 
     }
